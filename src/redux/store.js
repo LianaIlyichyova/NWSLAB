@@ -27,6 +27,14 @@ const store = createStore(
           },
         };
       }
+      case "LOAD_MORE": {
+        return {
+          ...state,
+          picsCurrentCount: {
+            picsCurrentCount: action.payload.picsCurrentCount,
+          },
+        };
+      }
 
       default:
         return state;
@@ -42,6 +50,9 @@ const store = createStore(
     cats: {
       cats: [],
     },
+    picsCurrentCount: {
+      picsCurrentCount: 10,
+    }
   }
 );
 

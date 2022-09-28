@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import ControlPanel from "./components/control-panel/control-panel";
-import Cats from "./components/cats/cats";
+import CatsPage from "./components/cats-page/cats-page";
 
 function App() {
   return (
     <BrowserRouter>
       <ControlPanel />
       <Routes>
-        <Route exact path="/cats/:name" element={<Cats />} />
+        <Route exact path="/cats/:name" element={<CatsPage />} />
       </Routes>
     </BrowserRouter>
   );

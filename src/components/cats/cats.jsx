@@ -13,9 +13,13 @@ const Cats = () => {
     return state.cats.cats;
   });
 
+  const picsCurrentCount = useSelector(function (state) {
+    return state.picsCurrentCount.picsCurrentCount;
+  });
+
   useEffect(() => {
     fetch(
-      `https://api.thecatapi.com/v1/images/search?limit=10&page=1&category_ids=${pageId}`
+      `https://api.thecatapi.com/v1/images/search?limit=${picsCurrentCount}&page=1&category_ids=${pageId}`
     )
       .then((response) => response.json())
       .then((data) =>
@@ -26,9 +30,9 @@ const Cats = () => {
           },
         })
       );
-  }, [pageId]);
+  }, [pageId, picsCurrentCount]);
 
-  console.log(pageId);
+  console.log(picsCurrentCount)
 
   return (
     <div className="cats">
