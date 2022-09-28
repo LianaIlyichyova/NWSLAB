@@ -13,6 +13,7 @@ const CatsPage = () => {
     return state.cats.cats;
   });
 
+
   function loadMore() {
     const count = picsCurrentCount + 10;
     dispatch({
@@ -26,6 +27,7 @@ const CatsPage = () => {
 
   return (
     <div className="cats-page">
+    
       <Cats />
       {cats && cats.length > 0 && (
         <input

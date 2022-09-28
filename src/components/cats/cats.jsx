@@ -42,7 +42,6 @@ const Cats = () => {
 
   return (
     <div className="cats">
-      {!pageId && <h1>Choose cats pictures by categorie</h1>}
       {cats &&
         cats.length > 0 &&
         cats.map((cat) => (
