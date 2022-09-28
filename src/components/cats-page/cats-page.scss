@@ -1,21 +1,22 @@
 $headerColor: rgb(54, 53, 53);
-$textColor:  rgb(235, 235, 235);
- $textHoverColor: white;
+$textColor: rgb(235, 235, 235);
+$textHoverColor: white;
 
- .cats-page{
-    text-align: center;
- }
-
- .load_more{
-    background-color: $headerColor;
-    color: $textColor;
-    border-radius: 4px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 10px;
+.cats-page {
+  text-align: center;
 }
 
-.load_more:hover{
-    color: $textHoverColor;
+.load_more {
+  background-color: $headerColor;
+  color: $textColor;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.load_more:hover {
+  color: $textHoverColor;
 }

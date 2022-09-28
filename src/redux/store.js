@@ -52,7 +52,7 @@ const store = createStore(
     },
     picsCurrentCount: {
       picsCurrentCount: 10,
-    }
+    },
   }
 );
 

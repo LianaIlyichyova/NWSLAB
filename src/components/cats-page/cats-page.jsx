@@ -4,15 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import "./cats-page.scss";
 
 const CatsPage = () => {
-    const dispatch = useDispatch();
-    const picsCurrentCount = useSelector(function (state) {
-      return state.picsCurrentCount.picsCurrentCount;
-    });
+  const dispatch = useDispatch();
+  const picsCurrentCount = useSelector(function (state) {
+    return state.picsCurrentCount.picsCurrentCount;
+  });
 
   const cats = useSelector(function (state) {
     return state.cats.cats;
   });
-
 
   function loadMore() {
     const count = picsCurrentCount + 10;
@@ -24,7 +23,6 @@ const CatsPage = () => {
     });
   }
 
-  console.log(picsCurrentCount)
 
   return (
     <div className="cats-page">

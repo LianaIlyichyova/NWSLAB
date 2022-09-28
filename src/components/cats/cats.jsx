@@ -18,6 +18,14 @@ const Cats = () => {
   });
 
   useEffect(() => {
+    dispatch({
+      type: "LOAD_MORE",
+      payload: {
+        picsCurrentCount: 10,
+      },
+    });
+  }, [pageId]);
+  useEffect(() => {
     fetch(
       `https://api.thecatapi.com/v1/images/search?limit=${picsCurrentCount}&page=1&category_ids=${pageId}`
     )
@@ -32,11 +40,9 @@ const Cats = () => {
       );
   }, [pageId, picsCurrentCount]);
 
-  console.log(picsCurrentCount)
-
   return (
     <div className="cats">
-        {!pageId && <h1>Choose cats pictures by categorie</h1>}
+      {!pageId && <h1>Choose cats pictures by categorie</h1>}
       {cats &&
         cats.length > 0 &&
         cats.map((cat) => (
