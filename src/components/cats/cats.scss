@@ -1,0 +1,16 @@
+.cats{
+    text-align: center;
+}
+
+.cat{
+    margin: 30px;
+    display:inline-grid; 
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.cat_pic{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+}
