@@ -30,15 +30,19 @@ const Cats = () => {
       `https://api.thecatapi.com/v1/images/search?limit=${picsCurrentCount}&page=1&category_ids=${pageId}`
     )
       .then((response) => response.json())
-      .then((data) =>
+      .then((data) =>{
         dispatch({
           type: "CATS",
           payload: {
-            cats: data,
+            cats: picsCurrentCount<=10 ? data : [...cats, ...data],
           },
         })
+      }
+        
       );
   }, [pageId, picsCurrentCount]);
+
+  console.log(cats)
 
   return (
     <div className="cats">
